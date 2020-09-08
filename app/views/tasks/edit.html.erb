@@ -1,8 +1,17 @@
-<h1>Task editor</h1>
-  <%= form_for(@task) do |f| %>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-    <%= f.label :details %>
-    <%= f.text_field :details %>
-    <%= f.submit %>
-  <% end %>
+<div class="editor-container">
+  <div class="form-container">
+    <h1>Task editor</h1>
+    <%= form_for(@task) do |f| %>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+      <%= f.label :details %>
+      <%= f.text_field :details %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+  <div class="task-new">
+    <h6><%= link_to "Create new task", new_task_path %></h6>
+  </div>
+
+  <%= link_to "Back to list", tasks_path %>
+</div>

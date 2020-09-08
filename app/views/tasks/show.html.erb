@@ -1,12 +1,16 @@
 <div class="show-container">
 
-  <div class="title-and-edit-container">
-    <h1><%= @task.title %></h1>
-    <h5><%= link_to "Edit task", edit_task_path(@task) %></h5>
-  </div>
+  <div class="task-container">
+    <div class="title-and-edit-container">
+      <h1><%= @task.title %></h1>
+      <%= link_to edit_task_path(@task) do %>
+        <i class="fas fa-edit"></i>
+      <% end %>
+    </div>
 
-  <div class="task-details">
-    <h3><%= @task.details %></h3>
+    <div class="task-details">
+      <p><strong>Description: </strong><%= @task.details %></p>
+    </div>
   </div>
 
   <%= link_to "Back to list", tasks_path %>

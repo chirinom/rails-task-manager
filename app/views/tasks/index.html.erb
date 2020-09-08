@@ -4,7 +4,8 @@
 
   <div class="task-list">
     <% @tasks.each do |task| %>
-      <h6><%= task.completed ? "[X]" : "[ ]" %>  <%= link_to task.title, task_path(task) %>
+      <h6><%= check_box("task", "complited")%> 
+      <%= link_to task.title, task_path(task) %>
       <%= link_to task_path(task), method: :delete,
       data: { confirm: "Are you sure?"} do %>
         <i class="fas fa-trash-alt fa-sm"></i>
