@@ -1,0 +1,18 @@
+<div class="index-container">
+
+  <h1>My Tasks</h1>
+
+  <div class="task-list">
+    <% @tasks.each do |task| %>
+      <h6><%= task.completed ? "[X]" : "[ ]" %>  <%= link_to task.title, task_path(task) %>
+      <%= link_to task_path(task), method: :delete,
+      data: { confirm: "Are you sure?"} do %>
+        <i class="fas fa-trash-alt fa-sm"></i>
+      <% end %></h6>
+    <% end %>
+  </div>
+
+  <div class="task-new">
+    <h6><%= link_to "Create new task", new_task_path %></h6>
+  </div>
+</div>

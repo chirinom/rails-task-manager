@@ -1,0 +1,42 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.index-container {
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.1);
+    width: 700px;
+    height: 400px;
+    padding: 30px
+}
+
+.show-container {
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.1);
+    width: 700px;
+    height: 400px;
+    padding: 30px
+}
+
+.show-container h1 {
+    margin-bottom: 20px;
+}
+
+.new-task-form-container {
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.1);
+    width: 700px;
+    height: 400px;
+    padding: 30px
+}
+
+// .task {
+//     display: flex
+// }
+
+.task-new {
+    margin-top: 50px
+}
+
+.title-and-edit-container {
+    display: flex;
+    justify-content: space-between;
+}
